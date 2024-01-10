@@ -1,0 +1,28 @@
+import java.util.*;
+
+class Collect2 {
+
+    public static void main(String args[]) {
+        LinkedList<String> fruits = new LinkedList<String>();
+
+        // Adding elements
+        fruits.add("Apple");
+        fruits.add("Mango");
+        fruits.add("Orange");
+        fruits.add("Banana");
+
+        System.out.println("After Adding:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+
+        // Removing element
+        fruits.remove("Orange");
+        fruits.remove("Apple");
+
+        System.out.println("\nAfter Removing:");
+        for (String fruit : fruits) {
+            System.out.println(fruit);
+        }
+    }
+}
