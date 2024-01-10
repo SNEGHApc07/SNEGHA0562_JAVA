@@ -1,0 +1,31 @@
+import java.util.*;
+class Collect {
+    public static void main(String args[]) {
+        LinkedList<String> al = new LinkedList<String>();
+        al.add("Apple");
+        al.add("Mango");
+        al.add("Orange");
+        al.add("Banana");
+
+        String[] array = al.toArray(new String[al.size()]);
+        System.out.println("Elements in the array:");
+        for (String element : array) {
+            System.out.println(element);
+        }
+        String newElement = "Grapes";
+        array = Arrays.copyOf(array, array.length + 1);
+        array[array.length - 1] = newElement;
+        System.out.println("\nElements in the updated array after adding " + newElement + ":");
+        for (String element : array) {
+            System.out.println(element);
+        }
+        String elementToRemove = "Orange";
+        List<String> tempList = new ArrayList<>(Arrays.asList(array));
+        tempList.remove(elementToRemove);
+        array = tempList.toArray(new String[0]);
+        System.out.println("\nElements in the updated array after removing " + elementToRemove + ":");
+        for (String element : array) {
+            System.out.println(element);
+        }
+    }
+}
