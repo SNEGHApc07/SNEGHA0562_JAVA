@@ -1,0 +1,23 @@
+class OuterClass {
+
+    private int outerVar = 10;
+
+    // Inner class
+    public class InnerClass {
+
+        public void display() {
+            System.out.println("Inner class method displaying outerVar: " + outerVar);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Creating an instance of OuterClass
+        OuterClass outerObj = new OuterClass();
+
+        // Creating an instance of InnerClass
+        OuterClass.InnerClass innerObj = outerObj.new InnerClass();
+
+        // Calling the display method of InnerClass
+        innerObj.display();
+    }
+}
