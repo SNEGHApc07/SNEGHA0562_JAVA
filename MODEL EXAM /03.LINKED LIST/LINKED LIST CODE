@@ -1,0 +1,36 @@
+import java.util.LinkedList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class LinkedListHashMapExample {
+
+    public static void main(String[] args) {
+        // Creating a LinkedList
+        LinkedList<String> linkedList = new LinkedList<>();
+
+        // Adding elements to the LinkedList
+        linkedList.add("Apple");
+        linkedList.add("Banana");
+        linkedList.add("Orange");
+
+        // Printing the elements of the LinkedList
+        System.out.println("LinkedList:");
+        for (String fruit : linkedList) {
+            System.out.println(fruit);
+        }
+
+        // Creating a HashMap
+        HashMap<Integer, String> hashMap = new HashMap<>();
+
+        // Adding key-value pairs to the HashMap
+        hashMap.put(1, "Red");
+        hashMap.put(2, "Green");
+        hashMap.put(3, "Blue");
+
+        // Printing the elements of the HashMap
+        System.out.println("\nHashMap:");
+        for (Map.Entry<Integer, String> entry : hashMap.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+    }
+}
