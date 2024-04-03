@@ -1,0 +1,45 @@
+class ThreatLifecycle {
+
+    // Enum to represent different stages of the threat lifecycle
+    public enum ThreatStage {
+        IDENTIFICATION,
+        ANALYSIS,
+        CONTAINMENT,
+        ERADICATION,
+        RECOVERY
+    }
+
+    // Method to simulate each stage of the threat lifecycle
+    public void executeStage(ThreatStage stage) {
+        switch (stage) {
+            case IDENTIFICATION:
+                System.out.println("Identifying the threat...");
+                break;
+            case ANALYSIS:
+                System.out.println("Analyzing the threat...");
+                break;
+            case CONTAINMENT:
+                System.out.println("Containing the threat...");
+                break;
+            case ERADICATION:
+                System.out.println("Eradicating the threat...");
+                break;
+            case RECOVERY:
+                System.out.println("Recovering from the threat...");
+                break;
+            default:
+                System.out.println("Invalid threat stage");
+        }
+    }
+
+    public static void main(String[] args) {
+        ThreatLifecycle lifecycle = new ThreatLifecycle();
+
+        // Simulating each stage of the threat lifecycle
+        lifecycle.executeStage(ThreatStage.IDENTIFICATION);
+        lifecycle.executeStage(ThreatStage.ANALYSIS);
+        lifecycle.executeStage(ThreatStage.CONTAINMENT);
+        lifecycle.executeStage(ThreatStage.ERADICATION);
+        lifecycle.executeStage(ThreatStage.RECOVERY);
+    }
+}
