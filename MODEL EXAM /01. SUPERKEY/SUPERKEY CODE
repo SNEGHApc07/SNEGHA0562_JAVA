@@ -1,0 +1,37 @@
+// Parent class
+class Parent {
+    int parentVariable;
+
+    // Constructor of Parent class
+    Parent(int parentVariable) {
+        this.parentVariable = parentVariable;
+    }
+
+    void display() {
+        System.out.println("Parent variable: " + parentVariable);
+    }
+}
+
+// Child class inheriting from Parent class
+class Child extends Parent {
+    int childVariable;
+
+    // Constructor of Child class
+    Child(int parentVariable, int childVariable) {
+        super(parentVariable); // calling the constructor of the Parent class
+        this.childVariable = childVariable;
+    }
+
+    void display() {
+        super.display(); // calling the display() method of the Parent class
+        System.out.println("Child variable: " + childVariable);
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Child childObj = new Child(10, 20);
+        childObj.display();
+    }
+}
