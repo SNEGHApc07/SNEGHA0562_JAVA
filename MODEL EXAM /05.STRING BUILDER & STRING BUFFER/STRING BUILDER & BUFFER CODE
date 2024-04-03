@@ -1,0 +1,24 @@
+public class StringBuilderStringBufferExample {
+    public static void main(String[] args) {
+        // Using StringBuilder
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Hello");
+        stringBuilder.append(" ");
+        stringBuilder.append("World");
+        stringBuilder.append("!");
+        
+        System.out.println("Using StringBuilder:");
+        System.out.println("Result: " + stringBuilder.toString());
+        
+        // Using StringBuffer
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append("Java");
+        stringBuffer.append(" ");
+        stringBuffer.append("is");
+        stringBuffer.append(" ");
+        stringBuffer.append("great");
+        
+        System.out.println("\nUsing StringBuffer:");
+        System.out.println("Result: " + stringBuffer.toString());
+    }
+}
